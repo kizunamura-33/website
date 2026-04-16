@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 【事務所名】</title>
+  <meta name="description" content="楽曲制作・Web制作の見積り依頼、所属に関するご相談など、お気軽にお問い合わせください。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar scrolled">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="事務所名" class="nav-logo-img" onerror="this.outerHTML='【<span class=&quot;logo-accent&quot;>事務所名</span>】'"></a>
+    <button class="nav-toggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="profiles.html">所属者</a></li>
+      <li><a href="music.html">楽曲制作</a></li>
+      <li><a href="web.html">Web制作</a></li>
+      <li><a href="goods.html">グッズ</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="contact.html" class="btn-nav">お問い合わせ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-tag">CONTACT</div>
+    <h1>お問い合わせ</h1>
+    <p>ご相談・見積り依頼・ご質問など、お気軽にどうぞ。</p>
+    <div class="breadcrumb">
+      <a href="index.html">TOP</a>
+      <span>/</span>
+      <span>お問い合わせ</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT TYPES -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="grid-3 reveal" style="margin-bottom:0;">
+      <a href="#form" style="text-decoration:none;">
+        <div style="background:var(--white);border-radius:var(--radius);padding:1.5rem;text-align:center;box-shadow:var(--shadow-sm);border-top:3px solid var(--accent);transition:transform var(--transition),box-shadow var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+          <div style="font-size:1.8rem;margin-bottom:0.6rem;">🎵</div>
+          <h3 style="font-size:0.95rem;margin-bottom:0.3rem;color:var(--text-dark);">楽曲制作の見積り</h3>
+          <p style="font-size:0.8rem;color:var(--text-mid);">オリジナル楽曲・BGM制作のご依頼</p>
+        </div>
+      </a>
+      <a href="#form" style="text-decoration:none;">
+        <div style="background:var(--white);border-radius:var(--radius);padding:1.5rem;text-align:center;box-shadow:var(--shadow-sm);border-top:3px solid var(--accent);transition:transform var(--transition),box-shadow var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+          <div style="font-size:1.8rem;margin-bottom:0.6rem;">💻</div>
+          <h3 style="font-size:0.95rem;margin-bottom:0.3rem;color:var(--text-dark);">Web制作の相談・見積り</h3>
+          <p style="font-size:0.8rem;color:var(--text-mid);">サイト制作・LP・ECのご依頼</p>
+        </div>
+      </a>
+      <a href="#form" style="text-decoration:none;">
+        <div style="background:var(--white);border-radius:var(--radius);padding:1.5rem;text-align:center;box-shadow:var(--shadow-sm);border-top:3px solid var(--accent);transition:transform var(--transition),box-shadow var(--transition);" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
+          <div style="font-size:1.8rem;margin-bottom:0.6rem;">💬</div>
+          <h3 style="font-size:0.95rem;margin-bottom:0.3rem;color:var(--text-dark);">その他のご相談</h3>
+          <p style="font-size:0.8rem;color:var(--text-mid);">ご質問・その他のご相談</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section" id="form">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <p class="section-subtitle">FORM</p>
+      <h2 class="section-title">お問い合わせフォーム</h2>
+      <p class="section-lead" style="margin-inline:auto; margin-top:0.5rem;">
+        内容を確認後、担当者よりご連絡いたします。通常2営業日以内にご返信します。
+      </p>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">お名前<span class="required">必須</span></label>
+          <input type="text" class="form-input" placeholder="山田 太郎" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">会社名・屋号（任意）</label>
+          <input type="text" class="form-input" placeholder="株式会社〇〇">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">メールアドレス<span class="required">必須</span></label>
+        <input type="email" class="form-input" placeholder="example@email.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">お問い合わせの種類<span class="required">必須</span></label>
+        <select class="form-select" id="inquiryType" required>
+          <option value="">選択してください</option>
+          <option value="music">楽曲制作の見積り・依頼</option>
+          <option value="web">Web制作の見積り・依頼</option>
+          <option value="audition">所属・オーディションについて</option>
+          <option value="goods">グッズについて</option>
+          <option value="other">その他のご相談・ご質問</option>
+        </select>
+      </div>
+      <div class="form-group" id="budgetGroup" style="display:none;">
+        <label class="form-label">ご予算の目安（任意）</label>
+        <select class="form-select">
+          <option value="">選択してください</option>
+          <option>〜¥10,000</option>
+          <option>¥10,000〜¥30,000</option>
+          <option>¥30,000〜¥50,000</option>
+          <option>¥50,000〜¥100,000</option>
+          <option>¥100,000以上</option>
+          <option>未定・要相談</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">お問い合わせ内容<span class="required">必須</span></label>
+        <textarea class="form-textarea" placeholder="ご相談内容・ご要望・ご質問などをできるだけ詳しくお書きください。" required></textarea>
+      </div>
+      <div style="background:var(--accent-light); border-radius:8px; padding:1rem 1.2rem; margin-bottom:1.5rem; font-size:0.82rem; color:var(--text-mid); line-height:1.7;">
+        <strong style="color:var(--accent);">個人情報の取り扱いについて</strong><br>
+        ご入力いただいた個人情報は、お問い合わせへの返答・業務連絡のみに使用します。第三者への提供は行いません。
+      </div>
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary btn-lg">送信する</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- OTHER CONTACT -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <p class="section-subtitle">OTHER WAYS</p>
+      <h2 class="section-title">その他の連絡方法</h2>
+    </div>
+    <div class="grid-2 reveal" style="max-width:700px; margin-inline:auto;">
+      <div style="background:var(--white); border-radius:var(--radius); padding:1.5rem 2rem; box-shadow:var(--shadow-sm); text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.6rem;">💬</div>
+        <h3 style="font-size:1rem; margin-bottom:0.4rem;">LINE</h3>
+        <p style="font-size:0.83rem; color:var(--text-mid); margin-bottom:1rem;">LINEでも受け付けています。QRコードから友達登録してメッセージをお送りください。</p>
+        <div style="background:var(--base-dark); border-radius:8px; width:80px; height:80px; margin:0 auto; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:var(--text-light); text-align:center; border:1px solid var(--border);">
+          LINE QR
+        </div>
+      </div>
+      <div style="background:var(--white); border-radius:var(--radius); padding:1.5rem 2rem; box-shadow:var(--shadow-sm); text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.6rem;">𝕏</div>
+        <h3 style="font-size:1rem; margin-bottom:0.4rem;">X (Twitter) DM</h3>
+        <p style="font-size:0.83rem; color:var(--text-mid); margin-bottom:1rem;">X(旧Twitter)のDMでもお気軽にご連絡ください。</p>
+        <a href="#" class="btn btn-outline btn-sm">@【アカウント名】</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo"><img src="images/logo.png" alt="事務所名" class="footer-logo-img" onerror="this.outerHTML='【<span class=&quot;logo-accent&quot;>事務所名</span>】'"></div>
+        <p class="footer-desc">九州発、エンタメを志す人の「第一歩」の背中を押したい事務所。</p>
+      </div>
+      <div class="footer-col">
+        <h4>サービス</h4>
+        <ul>
+          <li><a href="profiles.html">所属者紹介</a></li>
+          <li><a href="music.html">楽曲制作</a></li>
+          <li><a href="web.html">Web制作</a></li>
+          <li><a href="goods.html">グッズ通販</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>応募・依頼</h4>
+        <ul>
+          <li><a href="audition.html">オーディション</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>事務所</h4>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 【事務所名】. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Show budget field for music/web inquiries
+  const inquiryType = document.getElementById('inquiryType');
+  const budgetGroup = document.getElementById('budgetGroup');
+  if (inquiryType) {
+    inquiryType.addEventListener('change', () => {
+      const show = ['music', 'web'].includes(inquiryType.value);
+      budgetGroup.style.display = show ? 'block' : 'none';
+    });
+    // Pre-select from URL param
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('type');
+    if (type) {
+      inquiryType.value = type;
+      inquiryType.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+</body>
+</html>

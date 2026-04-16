@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【事務所名】 - 共創 協奏 競争</title>
+  <meta name="description" content="九州発、エンタメを志す人の「第一歩」の背中を押したい事務所。所属応募・楽曲制作・Web制作のご依頼はこちら。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Additional top-page styles */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .overview-item {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--base);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .overview-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .overview-num {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .overview-label {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+    .goods-preview-inner {
+      background: var(--text-dark);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .goods-preview-text h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+    .goods-preview-text p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .goods-preview-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .goods-preview-item {
+      background: rgba(255,255,255,0.05);
+      border-radius: var(--radius);
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: background var(--transition);
+    }
+    .goods-preview-item:hover {
+      background: rgba(0, 164, 151, 0.15);
+    }
+    @media (max-width: 700px) {
+      .goods-preview-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="事務所名" class="nav-logo-img" onerror="this.outerHTML='【<span class=&quot;logo-accent&quot;>事務所名</span>】'">
+    </a>
+    <button class="nav-toggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="profiles.html">所属者</a></li>
+      <li><a href="music.html">楽曲制作</a></li>
+      <li><a href="web.html">Web制作</a></li>
+      <li><a href="goods.html">グッズ</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="contact.html" class="btn-nav">お問い合わせ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO / FIRST VIEW -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="wave-circle"></div>
+    <div class="wave-circle"></div>
+    <div class="wave-circle"></div>
+    <div class="wave-circle"></div>
+    <div class="wave-circle"></div>
+    <div class="wave-circle"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-tag">九州発 エンタメ事務所</div>
+    <h1 class="hero-copy">共創　協奏　競争</h1>
+    <p class="hero-sub">
+      九州発、エンタメを志す人の「第一歩」の<br>背中を押したい事務所
+    </p>
+    <div class="hero-ctas">
+      <a href="audition.html" class="btn btn-primary btn-lg">所属を検討する</a>
+      <a href="contact.html" class="btn btn-outline btn-lg">お問い合わせ</a>
+    </div>
+  </div>
+
+  <!-- Sound wave decoration -->
+  <div class="sound-wave" aria-hidden="true">
+    <div class="sound-bar"></div><div class="sound-bar"></div><div class="sound-bar"></div>
+    <div class="sound-bar"></div><div class="sound-bar"></div><div class="sound-bar"></div>
+    <div class="sound-bar"></div><div class="sound-bar"></div><div class="sound-bar"></div>
+    <div class="sound-bar"></div><div class="sound-bar"></div><div class="sound-bar"></div>
+    <div class="sound-bar"></div><div class="sound-bar"></div><div class="sound-bar"></div>
+    <div class="sound-bar"></div><div class="sound-bar"></div><div class="sound-bar"></div>
+    <div class="sound-bar"></div><div class="sound-bar"></div>
+  </div>
+
+  <div class="hero-scroll">SCROLL</div>
+
+  <!-- Wave bottom -->
+  <div class="hero-wave-bottom">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px;">
+      <path d="M0,40 C240,0 480,60 720,30 C960,0 1200,50 1440,20 L1440,60 L0,60 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+<!-- MISSION / CONCEPT -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="reveal">
+        <p class="section-subtitle">OUR CONCEPT</p>
+        <h2 class="section-title" style="margin-bottom:1.2rem;">
+          エンタメの<span>可能性</span>を<br>九州から広げていく
+        </h2>
+        <p class="mission-copy">
+          <em>共創</em>し、<em>協奏</em>し、<em>競争</em>する。<br>
+          それが私たちの在り方です。
+        </p>
+        <p style="margin-top:1.2rem; color:var(--text-mid); font-size:0.93rem; line-height:1.9;">
+          所属するアーティスト・クリエイターと共に、音楽・映像・Webの領域で価値を生み出します。
+          一人ひとりの個性を活かしながら、チームとして九州から全国へと発信していきます。
+        </p>
+        <div style="margin-top:2rem;">
+          <a href="company.html" class="btn btn-outline">事務所について詳しく</a>
+        </div>
+      </div>
+
+      <div class="mission-visual reveal reveal-delay-2">
+        <div class="mission-card">
+          <div class="mission-card-icon">🎵</div>
+          <div>
+            <h3>楽曲制作</h3>
+            <p>オリジナル楽曲・BGM・歌もの制作を格安で対応</p>
+          </div>
+        </div>
+        <div class="mission-card">
+          <div class="mission-card-icon">💻</div>
+          <div>
+            <h3>Web制作</h3>
+            <p>コーポレートサイトからLP・ECまで幅広く対応</p>
+          </div>
+        </div>
+        <div class="mission-card">
+          <div class="mission-card-icon">🎤</div>
+          <div>
+            <h3>タレント所属</h3>
+            <p>アーティスト・VTuber・クリエイターの活動を支援</p>
+          </div>
+        </div>
+        <div class="mission-card">
+          <div class="mission-card-icon">📦</div>
+          <div>
+            <h3>グッズ展開</h3>
+            <p>所属者のオリジナルグッズを企画・販売</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERS PREVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-subtitle">MEMBERS</p>
+      <h2 class="section-title">所属者 / グループ紹介</h2>
+      <p class="section-lead" style="margin-top:0.6rem;">
+        個性豊かなアーティスト・クリエイターが活動しています。
+      </p>
+    </div>
+
+    <div class="member-preview-grid reveal">
+      <div class="member-card">
+        <div class="member-card-photo">🎤</div>
+        <div class="member-card-body">
+          <div class="member-card-name">【名前】</div>
+          <div class="member-card-role">シンガーソングライター</div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-card-photo">🎸</div>
+        <div class="member-card-body">
+          <div class="member-card-name">【名前】</div>
+          <div class="member-card-role">バンドアーティスト</div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-card-photo">🎧</div>
+        <div class="member-card-body">
+          <div class="member-card-name">【名前】</div>
+          <div class="member-card-role">DTMクリエイター</div>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="member-card-photo">🎙️</div>
+        <div class="member-card-body">
+          <div class="member-card-name">【グループ名】</div>
+          <div class="member-card-role">アイドルグループ</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:2.5rem;" class="reveal">
+      <a href="profiles.html" class="btn btn-primary">全員のプロフィールを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC SERVICE -->
+<section class="section section--alt">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+      <div class="reveal">
+        <p class="section-subtitle">MUSIC PRODUCTION</p>
+        <h2 class="section-title">楽曲制作、<br>お任せください。</h2>
+        <p style="color:var(--text-mid); font-size:0.93rem; line-height:1.9; margin:1rem 0 1.5rem;">
+          オリジナル楽曲制作を格安でご提供。ポップス・アニメ系・EDM・ジャズなど幅広いジャンルに対応しています。実績と試聴サンプルをご確認ください。
+        </p>
+        <ul style="list-style:none; margin-bottom:1.8rem;">
+          <li style="display:flex; gap:0.6rem; margin-bottom:0.6rem; font-size:0.9rem; color:var(--text-mid);">
+            <span style="color:var(--accent); font-weight:700;">✓</span> 作曲・編曲・歌詞対応
+          </li>
+          <li style="display:flex; gap:0.6rem; margin-bottom:0.6rem; font-size:0.9rem; color:var(--text-mid);">
+            <span style="color:var(--accent); font-weight:700;">✓</span> ボイスロイド・人力ボーカル対応
+          </li>
+          <li style="display:flex; gap:0.6rem; margin-bottom:0.6rem; font-size:0.9rem; color:var(--text-mid);">
+            <span style="color:var(--accent); font-weight:700;">✓</span> ご要望に応じたポートフォリオ提示
+          </li>
+          <li style="display:flex; gap:0.6rem; font-size:0.9rem; color:var(--text-mid);">
+            <span style="color:var(--accent); font-weight:700;">✓</span> 無料見積り対応
+          </li>
+        </ul>
+        <a href="music.html" class="btn btn-primary">楽曲制作を依頼する</a>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div style="background:var(--text-dark); border-radius:var(--radius-lg); padding:2rem; display:flex; flex-direction:column; gap:1rem;">
+          <div style="background:rgba(255,255,255,0.05); border-radius:var(--radius); padding:1rem; display:flex; align-items:center; gap:1rem; border:1px solid rgba(255,255,255,0.08);">
+            <div style="width:48px;height:48px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:1.2rem;flex-shrink:0;">▶</div>
+            <div>
+              <div style="color:white;font-size:0.9rem;font-weight:700;">楽曲サンプル — ポップス</div>
+              <div style="color:rgba(255,255,255,0.4);font-size:0.78rem;">制作実績 / ポートフォリオ</div>
+            </div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05); border-radius:var(--radius); padding:1rem; display:flex; align-items:center; gap:1rem; border:1px solid rgba(255,255,255,0.08);">
+            <div style="width:48px;height:48px;background:rgba(0,164,151,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent-mid);font-size:1.2rem;flex-shrink:0;">▶</div>
+            <div>
+              <div style="color:white;font-size:0.9rem;font-weight:700;">楽曲サンプル — EDM</div>
+              <div style="color:rgba(255,255,255,0.4);font-size:0.78rem;">制作実績 / ポートフォリオ</div>
+            </div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05); border-radius:var(--radius); padding:1rem; display:flex; align-items:center; gap:1rem; border:1px solid rgba(255,255,255,0.08);">
+            <div style="width:48px;height:48px;background:rgba(0,164,151,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent-mid);font-size:1.2rem;flex-shrink:0;">▶</div>
+            <div>
+              <div style="color:white;font-size:0.9rem;font-weight:700;">楽曲サンプル — アニメ系</div>
+              <div style="color:rgba(255,255,255,0.4);font-size:0.78rem;">制作実績 / ポートフォリオ</div>
+            </div>
+          </div>
+          <a href="music.html" style="text-align:center;color:var(--accent-mid);font-size:0.85rem;padding:0.5rem;border-top:1px solid rgba(255,255,255,0.08);margin-top:0.5rem;">
+            すべての実績を見る →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEB SERVICE -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+      <div class="reveal" style="order:2;">
+        <p class="section-subtitle">WEB PRODUCTION</p>
+        <h2 class="section-title">Web制作、<br>丁寧に対応します。</h2>
+        <p style="color:var(--text-mid); font-size:0.93rem; line-height:1.9; margin:1rem 0 1.5rem;">
+          コーポレートサイト・LP・ポートフォリオサイト・ECサイトまで幅広く対応。初めての方でもわかりやすくご説明しながら進めます。
+        </p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.8rem;">
+          <div style="background:var(--accent-light); border-radius:var(--radius); padding:1rem; text-align:center;">
+            <div style="font-size:1.5rem; margin-bottom:0.3rem;">🌐</div>
+            <div style="font-size:0.85rem; font-weight:700;">コーポレートサイト</div>
+          </div>
+          <div style="background:var(--accent-light); border-radius:var(--radius); padding:1rem; text-align:center;">
+            <div style="font-size:1.5rem; margin-bottom:0.3rem;">📱</div>
+            <div style="font-size:0.85rem; font-weight:700;">LP制作</div>
+          </div>
+          <div style="background:var(--accent-light); border-radius:var(--radius); padding:1rem; text-align:center;">
+            <div style="font-size:1.5rem; margin-bottom:0.3rem;">🛒</div>
+            <div style="font-size:0.85rem; font-weight:700;">ECサイト</div>
+          </div>
+          <div style="background:var(--accent-light); border-radius:var(--radius); padding:1rem; text-align:center;">
+            <div style="font-size:1.5rem; margin-bottom:0.3rem;">✏️</div>
+            <div style="font-size:0.85rem; font-weight:700;">ポートフォリオ</div>
+          </div>
+        </div>
+        <a href="web.html" class="btn btn-primary">Web制作を依頼する</a>
+      </div>
+      <div class="reveal reveal-delay-2" style="order:1;">
+        <div style="background:var(--white); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow);">
+          <div style="background:var(--base-dark); border-radius:8px; padding:0.7rem 1rem; display:flex; gap:0.4rem; margin-bottom:1rem;">
+            <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+            <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+            <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+          </div>
+          <div style="height:180px; background:linear-gradient(135deg,var(--text-dark),#2d2d45); border-radius:8px; display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;">
+              <div style="color:var(--accent-mid); font-size:2.5rem;">🌐</div>
+              <div style="color:rgba(255,255,255,0.5); font-size:0.8rem; margin-top:0.5rem;">サンプルサイト</div>
+            </div>
+          </div>
+          <div style="margin-top:1rem; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.85rem; font-weight:700; color:var(--text-dark);">制作期間: 2〜4週間〜</span>
+            <span style="background:var(--accent-light); color:var(--accent); padding:0.25rem 0.7rem; border-radius:50px; font-size:0.75rem; font-weight:700;">無料相談あり</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS / OVERVIEW -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <p class="section-subtitle">OVERVIEW</p>
+      <h2 class="section-title">事務所について</h2>
+    </div>
+    <div class="overview-grid reveal">
+      <div class="overview-item">
+        <div class="overview-num">【N】</div>
+        <div class="overview-label">所属アーティスト・クリエイター数</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-num">【N】</div>
+        <div class="overview-label">楽曲制作実績</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-num">【N】</div>
+        <div class="overview-label">Web制作実績</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-num">随時</div>
+        <div class="overview-label">オーディション開催</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOODS -->
+<section class="section">
+  <div class="container">
+    <div class="goods-preview-inner reveal">
+      <div class="goods-preview-text">
+        <p class="section-subtitle" style="color:var(--accent-mid);">GOODS</p>
+        <h2>グッズ通販</h2>
+        <p>所属アーティストのオリジナルグッズを販売中。お気に入りのアーティストを応援しよう。</p>
+        <a href="goods.html" class="btn btn-white">グッズを見る</a>
+      </div>
+      <div class="goods-preview-items">
+        <div class="goods-preview-item">👕</div>
+        <div class="goods-preview-item">📷</div>
+        <div class="goods-preview-item">🎴</div>
+        <div class="goods-preview-item">🧢</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA: AUDITION / CONTACT -->
+<section class="cta-section">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:3rem;">
+      <p class="section-subtitle" style="color:var(--accent-mid);">GET STARTED</p>
+      <h2 style="font-size:clamp(1.6rem,3vw,2.4rem); color:var(--white);">あなたの「第一歩」を、一緒に。</h2>
+      <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; margin-top:0.8rem;">
+        所属希望・楽曲制作・Web制作のご依頼、まずはお気軽にご相談ください。
+      </p>
+    </div>
+    <div class="cta-grid reveal">
+      <div class="cta-card">
+        <div class="cta-card-icon">🎤</div>
+        <h3>オーディション応募</h3>
+        <p>随時開催中。所属を検討している方はまずこちらから。</p>
+        <a href="audition.html" class="btn btn-outline" style="width:100%; justify-content:center;">応募する</a>
+      </div>
+      <div class="cta-card">
+        <div class="cta-card-icon">🎵</div>
+        <h3>楽曲制作を依頼</h3>
+        <p>見積り無料。まずはどんな楽曲を作りたいか教えてください。</p>
+        <a href="contact.html?type=music" class="btn btn-outline" style="width:100%; justify-content:center;">見積りを依頼</a>
+      </div>
+      <div class="cta-card">
+        <div class="cta-card-icon">💻</div>
+        <h3>Web制作を依頼</h3>
+        <p>無料相談・無料見積り対応。お気軽にご相談ください。</p>
+        <a href="contact.html?type=web" class="btn btn-outline" style="width:100%; justify-content:center;">相談する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="事務所名" class="footer-logo-img" onerror="this.outerHTML='【<span class=&quot;logo-accent&quot;>事務所名</span>】'">
+        </div>
+        <p class="footer-desc">
+          九州発、エンタメを志す人の「第一歩」の背中を押したい事務所。<br>
+          所属応募・楽曲制作・Web制作のご依頼はお気軽にどうぞ。
+        </p>
+        <div class="footer-sns">
+          <a href="#" title="X(Twitter)">𝕏</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="YouTube">▶</a>
+          <a href="#" title="LINE">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>サービス</h4>
+        <ul>
+          <li><a href="profiles.html">所属者紹介</a></li>
+          <li><a href="music.html">楽曲制作</a></li>
+          <li><a href="web.html">Web制作</a></li>
+          <li><a href="goods.html">グッズ通販</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>応募・依頼</h4>
+        <ul>
+          <li><a href="audition.html">オーディション</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="contact.html?type=music">楽曲見積り依頼</a></li>
+          <li><a href="contact.html?type=web">Web見積り依頼</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>事務所</h4>
+        <ul>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">特定商取引法に基づく表記</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 【事務所名】. All rights reserved.</span>
+      <span>九州発 エンタメ事務所</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
