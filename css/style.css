@@ -159,6 +159,25 @@ h1, h2, h3, h4 {
   box-shadow: 0 2px 20px rgba(0, 164, 151, 0.1);
 }
 
+/* Hero上（透明）のナビは白テキスト */
+.navbar:not(.scrolled) .nav-menu a {
+  color: rgba(255, 255, 255, 0.85);
+}
+.navbar:not(.scrolled) .nav-menu a:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
+}
+.navbar:not(.scrolled) .nav-menu .btn-nav {
+  background: var(--accent);
+  color: var(--white) !important;
+}
+.navbar:not(.scrolled) .nav-logo-img {
+  filter: brightness(0) invert(1);
+}
+.navbar:not(.scrolled) .nav-toggle span {
+  background: var(--white);
+}
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -195,6 +214,7 @@ h1, h2, h3, h4 {
   display: block;
   object-fit: contain;
   margin-bottom: 0.8rem;
+  filter: brightness(0) invert(1);
 }
 
 .nav-menu {
@@ -373,8 +393,16 @@ h1, h2, h3, h4 {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: var(--base);
+  background: url('../images/hero-bg.png') center / cover no-repeat;
   padding-top: var(--nav-height);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(5,12,28,0.62) 0%, rgba(4,30,45,0.52) 100%);
+  z-index: 0;
 }
 
 .hero-bg {
@@ -388,7 +416,7 @@ h1, h2, h3, h4 {
 .wave-circle {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(0, 164, 151, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   animation: waveExpand 6s ease-out infinite;
 }
 
@@ -460,24 +488,27 @@ h1, h2, h3, h4 {
 
 .hero-tag {
   display: inline-block;
-  background: var(--accent-light);
-  color: var(--accent);
-  padding: 0.4rem 1rem;
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.9);
+  padding: 0.4rem 1.2rem;
   border-radius: 50px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.08em;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(0, 164, 151, 0.2);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
 }
 
 .hero-copy {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
   letter-spacing: 0.12em;
-  color: var(--text-dark);
+  color: var(--white);
   line-height: 1.1;
   margin-bottom: 1.5rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
 .hero-copy .char {
@@ -487,7 +518,7 @@ h1, h2, h3, h4 {
 
 .hero-sub {
   font-size: clamp(0.95rem, 2.2vw, 1.2rem);
-  color: var(--text-mid);
+  color: rgba(255,255,255,0.82);
   margin-bottom: 2.5rem;
   line-height: 1.8;
   font-weight: 400;
@@ -509,7 +540,7 @@ h1, h2, h3, h4 {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text-light);
+  color: rgba(255,255,255,0.5);
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   z-index: 1;
@@ -521,7 +552,7 @@ h1, h2, h3, h4 {
   display: block;
   width: 1px;
   height: 40px;
-  background: linear-gradient(to bottom, var(--accent), transparent);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
 }
 
 @keyframes bounce {

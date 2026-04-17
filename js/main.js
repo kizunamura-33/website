@@ -5,9 +5,11 @@ const navbar = document.querySelector('.navbar');
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
-// Scroll effect
+// Scroll effect — only toggle on index (hero page); subpages are always scrolled
+const isIndexPage = !document.querySelector('.page-hero');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 20) {
+  if (!isIndexPage) return;
+  if (window.scrollY > 60) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
