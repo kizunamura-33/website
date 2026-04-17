@@ -594,7 +594,7 @@ h1, h2, h3, h4 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(0.82rem, 1.55vw, 1.05rem);
   letter-spacing: 0.3em;
-  color: var(--text-mid);
+  color: var(--accent);
 }
 
 @media (max-width: 600px) {
